@@ -1,4 +1,7 @@
 /* CSS */
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: "Quicksand", sans-serif;
     padding: 0%;
@@ -55,6 +58,11 @@ nav a:hover {
 nav {
     background-color: #00a2c6;
     padding: 5px;
+    position: sticky;
+    top: 0;
+}
+header {
+    display: inline;
 }
 nav li {
     display: inline;
@@ -70,6 +78,8 @@ aside {
     width: 25%;
     padding-left: 20px;
 }
-* {
-    box-sizing: border-box;
+@media screen and (max-width: 1000px) { 
+    #content, aside {
+        width: 100%;
+        padding: 0; }
 }
