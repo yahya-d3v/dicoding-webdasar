@@ -2,6 +2,22 @@
 * {
     box-sizing: border-box;
 }
+@media screen and (max-width: 1200px) { 
+    main {
+        flex-flow: column nowrap;
+    }
+    main aside {
+        align-self: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    nav ul {
+        justify-content: center;
+    }
+    main aside {
+        align-self: stretch;
+    }
+}
 body {
     font-family: "Quicksand", sans-serif;
     padding: 0%;
@@ -9,7 +25,8 @@ body {
 }
 main {
     padding: 20px;
-    overflow: auto;
+    display: flex;
+    gap: 1.5rem;
 }
 h2, h3 {
     color: #00a2c6;
@@ -26,6 +43,11 @@ nav a {
     font-weight: 400;
     text-decoration: none;
     color: white;
+}
+nav ul {
+    padding-inline: 4rem;
+    display: flex;
+    gap: 2rem;
 }
 nav a:hover {
     font-weight: bold;
@@ -45,7 +67,6 @@ nav a:hover {
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    margin-top: 30px;
     padding: 25px;
 }
 .jumbotron {
@@ -65,21 +86,14 @@ header {
     display: inline;
 }
 nav li {
-    display: inline;
     list-style-type: none;
-    margin-right: 20px;
 }
 #content {
-    float: left;
-    width: 75%;
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
 }
 aside {
-    float: right;
-    width: 25%;
-    padding-left: 20px;
-}
-@media screen and (max-width: 1000px) { 
-    #content, aside {
-        width: 100%;
-        padding: 0; }
+    flex: 1;
 }
